@@ -13,7 +13,7 @@ export default function Home() {
       Preview: "",
     },
     ProstoreVercel: {
-      Prod: "https://prostore-prod2.vercel.app/us/en/pro",
+      Prod: "https://prostore-prod2.vercel.app/us/en/pro ",
       Hotfix: "http://prostore-hotfix.vercel.app/us/en/pro",
       QA: "https://prostore-qa.vercel.app/us/en/pro",
       Dev: "https://prostore-dev.vercel.app/us/en/pro",
@@ -29,7 +29,7 @@ export default function Home() {
       Preview: "",
     },
     HoneywellHome: {
-      Prod: "https://www.honeywellhome.com/us/en",
+      Prod: "https://www.honeywellhome.com/",
       Hotfix: "https://www.hotfix.honeywellhome.com/us/en",
       QA: "",
       Dev: "",
@@ -37,8 +37,8 @@ export default function Home() {
       Preview: "https://preview.honeywellhome.com/us/en",
     },
     Firstalert: {
-      Prod: "https://www.firstalert.com/us/en/",
-      Hotfix: "https://www.hotfix.firstalert.com/us/en/",
+      Prod: "https://www.firstalert.com/",
+      Hotfix: "https://www.hotfix.firstalert.com/",
       QA: "https://qa.firstalert.com/us/en",
       Dev: "",
       Authoring: "",
@@ -60,6 +60,14 @@ export default function Home() {
       Authoring: "https://authoring.firstalert.com/ca/en",
       Preview: "",
     },
+    VIP:{
+       Prod: "https://vip.resideo.com/pages/usaa-login",
+      Hotfix: "",
+      QA: "",
+      Dev: "",
+      Authoring: "",
+      Preview: "",
+    }
   };
 
   const [searchTerm, setSearchTerm] = useState("");
