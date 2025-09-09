@@ -105,7 +105,7 @@ const apps = {
   "HoneywellHome(eComm)": {
     Prod: "https://www.honeywellhome.com/",
     Hotfix: "https://www.hotfix.honeywellhome.com/us/en",
-    QA: "qa.honeywellhome.com",
+    QA: "https://www.qa.honeywellhome.com",
     Dev: "",
     Authoring: "",
     Preview: "",
@@ -186,7 +186,7 @@ const apps = {
   "ConnectedSavings(Marketing)": {
     Prod: "https://www.connectedsavings.com/",
     Hotfix: "https://www.hotfix.connectedsavings.com/",
-    QA: "httwww.r3.connectedsavings.com",
+    QA: "https://www.r3.connectedsavings.com/",
     Dev: "",
     Authoring: "https://authoring.connectedsavings.com/",
     Preview: "https://preview.connectedsavings.com/",
