@@ -119,7 +119,7 @@ const apps = {
     Preview: "",
   },
   "FirstalertCA(eComm)": {
-    Prod: "https://www.firstalert.com/ca/en/",
+    Prod: "https://www.firstalert.ca/ca/en/",
     Hotfix: "https://www.hotfix.firstalert.ca/ca/en/",
     QA: "",
     Dev: "",
