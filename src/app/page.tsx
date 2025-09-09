@@ -2,86 +2,237 @@
 import { useState } from "react";
 
 export default function Home() {
-  const headers = ["Prod", "Hotfix", "QA", "DevInt", "Authoring", "Preview"];
-  const apps = {
-    Prostore: {
-      Prod: "https://www.resideo.com/us/en/pro/pro-store",
-      Hotfix: "https://www.hotfix.rde.resideo.com/us/en/pro/pro-store",
-      QA: "https://qa2.resideo.com/us/en/pro/pro-store",
-      Dev: "",
-      Authoring: "",
-      Preview: "",
-    },
-    ProstoreVercel: {
-      Prod: "https://prostore-prod2.vercel.app/us/en/pro ",
-      Hotfix: "http://prostore-hotfix.vercel.app/us/en/pro",
-      QA: "https://prostore-qa.vercel.app/us/en/pro",
-      Dev: "https://prostore-dev.vercel.app/us/en/pro",
-      Authoring: "",
-      Preview: "",
-    },
-    Resideo: {
-      Prod: "https://www.resideo.com/us/en",
-      Hotfix: "https://www.hotfix.rde.resideo.com/us/en",
-      QA: "https://qwww.r3.rde.resideo.com/us/en/",
-      Dev: "",
-      Authoring: "https://authoring.resideo.com/us/en",
-      Preview: "",
-    },
-    HoneywellHome: {
-      Prod: "https://www.honeywellhome.com/",
-      Hotfix: "https://www.hotfix.honeywellhome.com/us/en",
-      QA: "",
-      Dev: "",
-      Authoring: "",
-      Preview: "",
-    },
-    Firstalert: {
-      Prod: "https://www.firstalert.com/",
-      Hotfix: "https://www.hotfix.firstalert.com/",
-      QA: "",
-      Dev: "",
-      Authoring: "",
-      Preview: "",
-    },
-    FirstalertCA: {
-      Prod: "https://www.firstalert.com/ca/en/",
-      Hotfix: "https://www.hotfix.firstalert.com/ca/en/",
-      QA: "",
-      Dev: "",
-      Authoring: "https://authoring.firstalert.com/ca/en",
-      Preview: "",
-    },
-    VIP:{
-       Prod: "https://vip.resideo.com/pages/usaa-login",
-      Hotfix: "",
-      QA: "",
-      Dev: "",
-      Authoring: "",
-      Preview: "",
-    }
-  };
+  const headers = ["Prod", "Hotfix", "QA", "Dev", "Authoring", "Preview"];
+  // const apps = {
+  //   Prostore: {
+  //     Prod: "https://www.resideo.com/us/en/pro/pro-store",
+  //     Hotfix: "https://www.hotfix.rde.resideo.com/us/en/pro/pro-store",
+  //     QA: "https://qa2.resideo.com/us/en/pro/pro-store",
+  //     Dev: "",
+  //     Authoring: "",
+  //     Preview: "",
+  //   },
+  //   ProstoreVercel: {
+  //     Prod: "https://prostore-prod2.vercel.app/us/en/pro ",
+  //     Hotfix: "http://prostore-hotfix.vercel.app/us/en/pro",
+  //     QA: "https://prostore-qa.vercel.app/us/en/pro",
+  //     Dev: "https://prostore-dev.vercel.app/us/en/pro",
+  //     Authoring: "",
+  //     Preview: "",
+  //   },
+  //   Resideo: {
+  //     Prod: "https://www.resideo.com/us/en",
+  //     Hotfix: "https://www.hotfix.rde.resideo.com/us/en",
+  //     QA: "https://qwww.r3.rde.resideo.com/us/en/",
+  //     Dev: "",
+  //     Authoring: "https://authoring.resideo.com/us/en",
+  //     Preview: "",
+  //   },
+  //   HoneywellHome: {
+  //     Prod: "https://www.honeywellhome.com/",
+  //     Hotfix: "https://www.hotfix.honeywellhome.com/us/en",
+  //     QA: "",
+  //     Dev: "",
+  //     Authoring: "",
+  //     Preview: "",
+  //   },
+  //   Firstalert: {
+  //     Prod: "https://www.firstalert.com/",
+  //     Hotfix: "https://www.hotfix.firstalert.com/",
+  //     QA: "",
+  //     Dev: "",
+  //     Authoring: "",
+  //     Preview: "",
+  //   },
+  //   FirstalertCA: {
+  //     Prod: "https://www.firstalert.com/ca/en/",
+  //     Hotfix: "https://www.hotfix.firstalert.ca/ca/en/",
+  //     QA: "",
+  //     Dev: "",
+  //     Authoring: "https://authoring.firstalert.com/ca/en",
+  //     Preview: "",
+  //   },
+  //   VIP: {
+  //     Prod: "https://vip.resideo.com/pages/usaa-login",
+  //     Hotfix: "",
+  //     QA: "",
+  //     Dev: "",
+  //     Authoring: "",
+  //     Preview: "",
+  //   },
+  //   B2B: {
+  //     Prod: "https://customer.resideo.com/en-US/Pages/default.aspx",
+  //     Hotfix: "",
+  //     QA: "https://qa-customer.resideo.com/en-US/Pages/default.aspx",
+  //     Dev: "dev-customer.resideo.com",
+  //     Authoring: "",
+  //     Preview: "",
+  //   },
+  //    Homecomfort: {
+  //     Prod: " https://homecomfort.resideo.com/sites/europe/en-gb/Pages/default.aspx",
+  //     Hotfix: "",
+  //     QA: "https://qa-homecomfort.resideo.com/sites/europe/en-GB/Pages/Honeywell_EES_Europe.aspx",
+  //     Dev: "",
+  //     Authoring: "",
+  //     Preview: "",
+  //   }
+  // };
+const apps = {
+  "Prostore(Pro)": {
+    Prod: "https://www.resideo.com/us/en/pro/pro-store",
+    Hotfix: "https://www.hotfix.rde.resideo.com/us/en/pro/pro-store",
+    QA: "https://qa2.resideo.com/us/en/pro/pro-store",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+  // ProstoreVercel: {
+  //   Prod: "https://prostore-prod2.vercel.app/us/en/pro ",
+  //   Hotfix: "http://prostore-hotfix.vercel.app/us/en/pro",
+  //   QA: "https://prostore-qa.vercel.app/us/en/pro",
+  //   Dev: "https://prostore-dev.vercel.app/us/en/pro",
+  //   Authoring: "",
+  //   Preview: "",
+  // },
+  "Resideo(Marketing)": {
+    Prod: "https://www.resideo.com/us/en",
+    Hotfix: "https://www.hotfix.rde.resideo.com/us/en",
+    QA: "https://qwww.r3.rde.resideo.com/us/en/",
+    Dev: "",
+    Authoring: "https://authoring.resideo.com/us/en",
+    Preview: "",
+  },
+  "HoneywellHome(eComm)": {
+    Prod: "https://www.honeywellhome.com/",
+    Hotfix: "https://www.hotfix.honeywellhome.com/us/en",
+    QA: "qa.honeywellhome.com",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+  "Firstalert(eComm)": {
+    Prod: "https://www.firstalert.com/",
+    Hotfix: "https://www.hotfix.firstalert.com/",
+    QA: "https://qa.firstalert.com/",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+  "FirstalertCA(eComm)": {
+    Prod: "https://www.firstalert.com/ca/en/",
+    Hotfix: "https://www.hotfix.firstalert.ca/ca/en/",
+    QA: "",
+    Dev: "",
+    Authoring: "https://authoring.firstalert.com/ca/en",
+    Preview: "",
+  },
+  "VIP(Private Store)": {
+    Prod: "https://vip.resideo.com/pages/usaa-login",
+    Hotfix: "https://hotfix.vip.resideo.com/",
+    QA: "https://qa.vip.resideo.com/",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+  "B2B(eComm)": {
+    Prod: "https://customer.resideo.com/en-US/Pages/default.aspx",
+    Hotfix: "",
+    QA: "https://qa-customer.resideo.com/en-US/Pages/default.aspx",
+    Dev: "https://dev-customer.resideo.com",
+    Authoring: "",
+    Preview: "",
+  },
+  'Homecomfort(eComm)': {
+    Prod: "https://homecomfort.resideo.com/sites/europe/en-gb/Pages/default.aspx",
+    Hotfix: "",
+    QA: "https://qa-homecomfort.resideo.com/sites/europe/en-GB/Pages/Honeywell_EES_Europe.aspx",
+    Dev: "https://dev-homecomfort.resideo.com/sites/europe/en-GB/Pages/Honeywell_EES_Europe.aspx",
+    Authoring: "",
+    Preview: "",
+  },
+
+  "EMEA(Marketing)": {
+    Prod: "https://www.resideo.com/emea/en/",
+    Hotfix: "https://www.hotfix.rde.resideo.com/emea/en/",
+    QA: "",
+    Dev: "",
+    Authoring: "https://authoring.resideo.com/emea/en/",
+    Preview: "https://preview.resideo.com/emea/en/",
+  },
+  "ProUnauthenticated(Pro)": {
+    Prod: "https://www.resideo.com/us/en/pro/",
+    Hotfix: "http://www.hotfix.rde.resideo.com/us/en/pro/",
+    QA: "https://www.r3.rde.resideo.com/us/en/pro/",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+  "TechWeb": {
+    Prod: "https://techweb.resideo.com/",
+    Hotfix: "",
+    QA: "",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+  "GridServices(Marketing)": {
+    Prod: "https://www.resideogridservices.com/resideo-grid-services",
+    Hotfix: "https://hotfix.resideogridservices.com/resideo-grid-services",
+    QA: "",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+  "ConnectedSavings(Marketing)": {
+    Prod: "https://www.connectedsavings.com/",
+    Hotfix: "https://www.hotfix.connectedsavings.com/",
+    QA: "httwww.r3.connectedsavings.com",
+    Dev: "",
+    Authoring: "https://authoring.connectedsavings.com/",
+    Preview: "https://preview.connectedsavings.com/",
+  },
+  "EmployeePortal(Internal eComm)": {
+    Prod: "https://employee.resideo.com/",
+    Hotfix: "",
+    QA: "",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+   "USAA(Private Store)": {
+    Prod: "https://www.usaa.com/my/logon?goto=https%3A%2F%2Fwww.usaa.com%2Finet%2Fwc%2Fnew_web_application_redirect%3Flevel%3D2%26destination%3D%252Futils%252Fproof-of-immigration%253Fredirect%253DRESIDEO_DIR%2526akredirect%253Dtrue%2526redirectedFromAuth%253Dtrue",
+    Hotfix: "",
+    QA: "",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+   "BRKElectronics(Marketing)": {
+    Prod: "https://www.brkelectronics.com/us/en/",
+    Hotfix: "https://www.hotfix.brkelectronics.com/us/en/",
+    QA: "https://www.r3.brkelectronics.com/us/en/",
+    Dev: "",
+    Authoring: "https://authoring.brkelectronics.com/us/en/",
+    Preview: "https://preview.brkelectronics.com/us/en/",
+  },
+   "Nationwide(Private Store)": {
+    Prod: "nationwide.resideo.com",
+    Hotfix: "",
+    QA: "http://www.r3.rde.resideo.com/emea/en/",
+    Dev: "",
+    Authoring: "",
+    Preview: "",
+  },
+};
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 5;
 
   const filteredApps = Object.entries(apps).filter(([appName]) =>
     appName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const totalPages = Math.ceil(filteredApps.length / rowsPerPage);
-  const paginatedApps = filteredApps.slice(
-    (currentPage - 1) * rowsPerPage,
-    currentPage * rowsPerPage
-  );
-
-  const goToPrev = () => setCurrentPage((p) => Math.max(p - 1, 1));
-  const goToNext = () => setCurrentPage((p) => Math.min(p + 1, totalPages));
-
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
-    setCurrentPage(1);
   };
 
   return (
@@ -113,7 +264,7 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            {paginatedApps.map(([appName, envs]) => (
+            {filteredApps.map(([appName, envs]) => (
               <tr key={appName}>
                 <td className="border px-4 py-2 font-medium">{appName}</td>
                 {headers.map((env) => {
@@ -137,7 +288,7 @@ export default function Home() {
                 })}
               </tr>
             ))}
-            {paginatedApps.length === 0 && (
+            {filteredApps.length === 0 && (
               <tr>
                 <td colSpan={headers.length + 1} className="text-center py-4">
                   No apps found.
@@ -147,46 +298,6 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-
-      {/* Styled Pagination */}
-      {totalPages > 1 && (
-        <div className="mt-6 flex justify-center">
-          <div className="flex items-center bg-gray-100 px-4 py-2 rounded-full shadow-md space-x-2">
-            <button
-              onClick={goToPrev}
-              disabled={currentPage === 1}
-              className="text-gray-500 disabled:opacity-30"
-            >
-              &lt;
-            </button>
-
-            {[...Array(totalPages)].map((_, index) => {
-              const page = index + 1;
-              return (
-                <button
-                  key={page}
-                  onClick={() => setCurrentPage(page)}
-                  className={`w-7 h-7 rounded-full text-sm flex items-center justify-center ${
-                    currentPage === page
-                      ? "bg-indigo-400 text-white font-semibold"
-                      : "text-gray-700 hover:bg-gray-300"
-                  }`}
-                >
-                  {page}
-                </button>
-              );
-            })}
-
-            <button
-              onClick={goToNext}
-              disabled={currentPage === totalPages}
-              className="text-gray-500 disabled:opacity-30"
-            >
-              &gt;
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
