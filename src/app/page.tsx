@@ -79,7 +79,7 @@ export default function Home() {
   // };
 const apps = {
   "Prostore(Pro)": {
-    Prod: "https://www.resideo.com/us/en/pro/pro-store",
+    Prod: "https://www.resideo.com/us/en/pro/pro-store/air/services/pro-iq-engage/p/hh06",
     Hotfix: "https://www.hotfix.rde.resideo.com/us/en/pro/pro-store",
     QA: "https://qa2.resideo.com/us/en/pro/pro-store",
     Dev: "",
