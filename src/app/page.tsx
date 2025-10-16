@@ -216,7 +216,7 @@ const apps = {
     Preview: "https://preview.brkelectronics.com/us/en/",
   },
    "Nationwide(Private Store)": {
-    Prod: "nationwide.resideo.com",
+    Prod: "https://vip.resideo.com/collections/nationwide?uniqueid=12345",
     Hotfix: "",
     QA: "http://www.r3.rde.resideo.com/emea/en/",
     Dev: "",
